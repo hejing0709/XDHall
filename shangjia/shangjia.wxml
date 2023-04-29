@@ -1,0 +1,19 @@
+<!--pages/shangjia/shangjia.wxml-->
+
+<view class="container">
+  <image src="{{chosedImage}}" bindtap="chooseImage"/>
+  <input name="image_name" placeholder="菜品名称" bindinput="imageName"/>
+  <picker bindchange="TChange" value="{{tindex}}" range="{{Tarray}}">
+    <view class="picker">
+      菜品类别：{{Tarray[tindex]}}
+    </view> 
+  </picker>
+  <button bindtap="send">选择图片</button>
+  <input class="input" name="userName" placeholder="请输入用户名"
+    bindinput="userNameInput"/>
+  
+  <view wx:for="{{images}}" wx:key="image_name">
+    <text>{{item.image_name}}</text>
+    <image src="{{'http://10.0.0.129:8000'+item.image_url}}" /> 
+  </view>
+</view>
