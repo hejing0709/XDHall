@@ -1,0 +1,35 @@
+<!--pages/main/xianganhall/yiqishitang/yiqishitang.wxml-->
+
+
+  <view class="left" style="float: left;" >
+    <scroll-view scroll-y="true" scroll-with-animation="true" class="scrollL"  style="height:100%;">
+      <block wx:for="{{DishKind}}">
+        <view class="one" data-id="{{item.kindId}}">
+          {{item.kindName}}
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class="right" style="float: right;">
+    <scroll-view class="right" scroll-y="true">
+      <block wx:for="{{DishName}}" >
+        <view class='goods' >
+          <image src="{{item.dishUrl}}" class='goodPic'mode=""/>
+          <view class="message">
+            <view style="font-size:40rpx; font-weight: bolder;">{{item.dishName}}</view>
+            <view style="">{{item.dishprice}} 元</view>
+            <view>剩余</view>
+            <view class="amount">
+              <view>份数</view>
+              <view class="choicenumber">
+                <image src="../../../../resources/ICON/minus.png" mode="" bindtap="subtract" data-id="{{item.dishId}}" />
+                <view style="width: 50rpx; height: 50rpx; text-align: center;">{{item.dishAmount}}</view>
+                <image src="../../../../resources/ICON/PLUS.png" mode="" bindtap="plus" data-id="{{item.dishId}}"/>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+

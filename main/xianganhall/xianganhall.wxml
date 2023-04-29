@@ -1,0 +1,78 @@
+<!--pages/main/xianganhall/xianganhall.wxml-->
+<view>
+  一期食堂
+</view>
+  <swiper class="nearby" autoplay="true" 	indicator-dots="true">
+    <block class="storename" wx:for="{{nearStore}}" wx:key="{{index}}" wx:for-item="store">
+      <swiper-item >
+        <view class="new" data-id="{{index}}" bindtap="click">
+          <image class="image"src="{{store.image_url}}" mode=""/>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="shitang">
+    <scroll-view class="more_" scroll-x="true" >
+      <view class="hall">
+        一期食堂
+      </view>
+      <view class="hall">
+        二期食堂
+      </view>  
+      <view class="hall">
+        三期食堂
+      </view>
+    </scroll-view>
+  </view>
+<yiqishitang  id="child"></yiqishitang>
+
+<!-- <yiqishitang/> -->
+
+<view class="" style="display:{{show}};">
+  <view class="danmu">
+    <input bindinput="inp" style="opacity: 0.4; background-color: gray; border-radius: 30rpx; margin-right: 20rpx;" placeholder-style="color: black;" value="{{bind_shootValue}}"/>
+    <button class="shoot" size="mini" bindtap="shoot"  style="margin-right: 20rpx;">发射</button>
+  </view>
+</view>
+<view class="barrage_switch" style="bottom: 5px;align-items: center;">
+  <!-- <image class="danmubutton" src="../../../resources/ICON/微信图片_20230202010801.png" mode=""/> -->
+  <switch  checked="" bindchange="show_danmu" />
+  <button style="position: fixed;right: 0;" bindtap="xiadan">下单</button>
+</view>
+
+
+<view class="barrage-fly" style="display:{{show}};bottom: 0px; position: fixed;z-index: 1;">
+  <block wx:for="{{all_danmu_new}}" wx:key="unique" style="z-index: 2;">
+   <view class="oneDanmu" style="position: fixed;z-index: 1; color:{{item.shootColor}};left:{{item.shootLeft}}px;bottom:{{item.shootHeight}}px;">
+    {{item.shootText}}
+   </view>
+  </block>
+</view>
+
+<!-- <view class="a" style="position:fixed;z-index:1 ;bottom:;left:100px ;">
+  classsss
+</view> -->
+<!-- <view class="danmu">
+  <switch class="danmu" checked="" bindchange="show_danmu" class="danmukaiguan"/>
+  <view class="show_" style="display:{{show}};">
+  <input type="text" placeholder="请输入弹幕" value=""  class="danmucontain" bindinput="inp" />
+  <view class="fashedanmu" bindtap="lunch">fashe</view>
+</view>
+</view> -->
+
+
+
+<!-- <view class="view">
+  <block wx:for="{{danmu}}" wx:key="id">
+    <text class="item"  style="">{{index+item.text}}</text>
+  </block>
+</view> -->
+<!-- <view class="shitangcaipin">
+  <scroll-view scroll-y scroll-with-animation scroll-left="{{scrollLength}}" class='scrollY'>
+    <block wx:for="{{caipin}}">
+      <view>
+        {{item}}
+      </view>      
+    </block>
+  </scroll-view>
+</view> 

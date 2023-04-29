@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "xianganhall":"./xianganhall/xianganhall",
+    "simingxiaoqu":"./simingxiaoqu/simingxiaoqu",
+    "zhangzhouxiaoqu":"./zhangzhouxiaoqu/zhangzhouxiaoqu"
+  }
+}

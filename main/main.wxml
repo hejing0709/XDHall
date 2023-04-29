@@ -1,0 +1,25 @@
+<!--pages/main/main.wxml-->
+
+<view class="header_">
+  <scroll-view class="more_" scroll-x="true" >
+    <block  wx:for="{{titles}}" >
+      <view class="title {{currentTab==item.id ? 'active' : ''}}" data-current="{{item.id}}" bindtap="choice" data-key='{{index}}' >
+        {{item.name}}
+      </view>
+    </block>
+  </scroll-view>
+  <view class="more_1">
+    +
+  </view>
+</view>
+<view wx:if='{{currentTab == 1}}'>
+  <xianganhall/>
+</view>
+<view wx:if='{{currentTab == 2}}'>
+  <simingxiaoqu/>
+</view>
+<view wx:if='{{currentTab == 3}}'>
+  <zhangzhouxiaoqu/>
+</view>
+
+

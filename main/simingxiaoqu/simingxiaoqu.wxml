@@ -1,0 +1,17 @@
+<!--pages/main/simingxiaoqu/simingxiaoqu.wxml-->
+<text>思明校区</text>
+
+<swiper class="nearby" autoplay="true" 	indicator-dots="true">
+  <block class="storename" wx:for="{{nearStore}}" wx:for-item="store">
+    <swiper-item >
+    <view class="name">
+      {{store.storename}}
+    </view>
+    <navigator url="{{store.link}}">
+    <image src="{{store.image_url}}" id="{{store.storeid}}" bandtap="intostore" mode=""/>
+    </navigator>
+    </swiper-item>
+  </block>
+</swiper>
+
+

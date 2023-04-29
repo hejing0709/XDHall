@@ -1,0 +1,45 @@
+/* pages/main/main.wxss */
+page{
+  background-color: bisque;
+}
+.header_{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width:100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.title{
+  display: inline-block;
+  border: 2px solid #2b4b80;
+  border-radius: 10%;
+  /* white-space: nowrap; */
+  width: fit-content;
+  /* width: 20rpx; */
+}
+.more_{
+  display: inline-block;
+  background-color: bisque;
+  white-space: nowrap;
+  flex: 1;
+  width: 1px;
+}
+
+.active{
+  background-color: #fff;
+  color: rgb(247, 181, 120);
+}
+
+.more_1{
+  display: inline-block;
+  border: 2px solid  #2b4b80;
+  border-radius: 10%;
+  width: fit-content;
+}
+
+.block{
+
+}
