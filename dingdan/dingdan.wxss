@@ -1,0 +1,10 @@
+/* pages/dingdan/dingdan.wxss */
+.message{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right:20px;
+}
+.Time{
+  display: flex;
+}
